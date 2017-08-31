@@ -1,0 +1,16 @@
+{
+  "name": "tinderservapp",
+  "version": "1.0.0",
+  "description": "Tinder clone Server app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Said Mançouri",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.4",
+    "mongoose": "^4.11.9",
+    "nodemon": "^1.11.0"
+  }
+}

@@ -1,7 +1,7 @@
-var tCard = require ('./../models/tCardModel');
+var TinderCard = require ('./../models/tCardModel');
 
 var get = function (req, res) {
-  tCard.find(function(err,tCards){
+  TinderCard.find(function(err,tCards){
     if(err){
       res.status(500);
       res.send("Internal server error");
@@ -13,4 +13,21 @@ var get = function (req, res) {
   })
 };
 
-module.exports = get;
+var add = function(req,res){
+  var tCard=new TinderCard(req.body);
+    tCard.save(function(err){
+      if(err){
+        res.status(500);
+        res.send("Failed");
+      }
+      else{
+        res.status(201);
+        res.send(tCard);
+      }
+    })
+}
+
+module.exports = {
+  add: add,
+  get: get
+};

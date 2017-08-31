@@ -1,5 +1,8 @@
 var express= require('express');
 var tCardsRouter = require ('./routes/tCardsRouter');
+var mongoose = require('mongoose');
+
+var db=mongoose.connect("mongodb://localhost/TCardsDb");
 
 var app = express();
 
